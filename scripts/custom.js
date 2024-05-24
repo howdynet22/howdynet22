@@ -20,3 +20,22 @@ window.addEventListener('load', () => {
     const loader = document.querySelector('.loading-screen');
     loader.classList.add('hidden');
 });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    });
+
