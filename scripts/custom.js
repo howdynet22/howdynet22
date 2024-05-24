@@ -15,24 +15,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Initialize Swiper for program benefits section
-    var programBenefitsSwiper = new Swiper('.swiper-container', {
+    var programBenefitsSwiper = new Swiper('.swiper-benefits-container', {
         loop: true,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-benefits-pagination',
             clickable: true,
         },
         slideToClickedSlide: true,
     });
 
-    // Initialize Swiper for program benefits section
-    var autoPlaySwiper = new Swiper('.swiper-container', {
+    // Initialize Swiper for autoplay section
+    var autoPlaySwiper = new Swiper('.swiper-autoplay-container', {
         loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-autoplay-pagination',
             clickable: true,
         },
         effect: 'fade',
@@ -40,22 +40,22 @@ document.addEventListener('DOMContentLoaded', function () {
             crossFade: true
         },
     });
-});
 
- // Initialize Swiper
-        var swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+    // Initialize Swiper for navigation
+    var navigationSwiper = new Swiper('.swiper-navigation-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-navigation-pagination',
+            clickable: true,
+        },
+    });
 
-// Wait for all images, stylesheets, and scripts to be loaded
-window.addEventListener('load', () => {
-    const loader = document.querySelector('.loading-screen');
-    loader.classList.add('hidden');
+    // Wait for all images, stylesheets, and scripts to be loaded
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loading-screen');
+        loader.classList.add('hidden');
+    });
 });
