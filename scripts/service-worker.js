@@ -8,8 +8,8 @@ const urlsToCache = [
     '/cosmetics.html',
     '/order.html',
     '/loyalty.html',
-    '/css/styles.css',
-    '/js/app.js',
+    '/styles/styles.css',
+    '/scripts/app.js',
     '/images/logo.jpg',
     '/images/dairy1.jpg',
     '/images/vegetables.jpg',
@@ -17,6 +17,21 @@ const urlsToCache = [
     '/images/branch1.jpg',
     '/images/branch2.jpg',
     '/images/branch3.jpg',
+    'images/milk.jpg',
+    'images/cheese.jpg',
+    'images/yogurt.jpg',
+    'images/recipie1.jpg',
+    'images/recipie2.jpg',
+    '/images/exotic_vegetables.jpg',
+    '/images/root_vegetables.jpg',
+    '/images/leafy_greens.jpg',
+    '/images/recipie3.jpg',
+    '/images/recipie3.jpg',
+    'images/skin_care.jpg',
+    'images/makeup.jpg',
+    'images/makeup_tips.jpg',
+    'images/haircare.jpg',
+   
     // Add other images and assets as needed
 ];
 
