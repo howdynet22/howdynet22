@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+}
 // Wait for all images, stylesheets, and scripts to be loaded
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loading-screen');
