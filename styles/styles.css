@@ -12,13 +12,13 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    padding: 10px 20px; /* Adjust padding for better mobile experience */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 header .logo {
@@ -32,18 +32,24 @@ header .logo img {
 }
 
 header .nav-links {
-    display: none; /* Hide by default on mobile */
+    flex-grow: 1; /* Allow navigation links to expand */
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
 }
 
 header .nav-links ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Display links in a row */
 }
 
 header .nav-links ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-left: 20px; /* Add spacing between links */
+}
+
+header .nav-links ul li:first-child {
+    margin-left: 0; /* Remove left margin from the first link */
 }
 
 header .nav-links ul li a {
@@ -53,13 +59,24 @@ header .nav-links ul li a {
 }
 
 /* Media query for mobile */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     header .container {
-        padding: 0 40px;
+        padding: 10px; /* Adjust padding for mobile */
     }
 
     header .nav-links {
-        display: block; /* Show on screens wider than 768px */
+        display: none; /* Hide navigation links by default on mobile */
+    }
+
+    header .nav-links.open {
+        display: block; /* Display links when menu is open */
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #10b981;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -222,7 +239,3 @@ section p {
 .why-choose-us-card:hover {
     transform: translateY(-5px) scale(1.05);
 }
-
-
-
-
