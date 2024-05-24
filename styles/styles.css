@@ -214,6 +214,11 @@ section p {
     animation: pulse 1s infinite;
 }
 
+.hidden {
+    display: none;
+}
+
+
 /* Header functionality */
 .hide-header-button {
     position: fixed;
