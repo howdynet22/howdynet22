@@ -4,19 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-header .container {
-    transition: all 0.3s ease-in-out;
-}
-
-main {
-    animation: fadeIn 1s ease-in-out;
-}
-
 /* Header styling */
 header {
     background-color: #10b981;
@@ -27,52 +14,65 @@ header {
     z-index: 1000;
 }
 
-header.hidden {
-    transform: translateY(-100%);
-}
-
-header a {
-    color: #ffffff;
-}
-
-header a:hover {
-    color: #d1fae5;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+header .container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    flex-shrink: 0;
-    margin-top: auto;
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .nav-links {
+    display: none; /* Hide by default on mobile */
+}
+
+header .nav-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header .nav-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media query for mobile */
+@media only screen and (min-width: 768px) {
+    header .container {
+        padding: 0 40px;
+    }
+
+    header .nav-links {
+        display: block; /* Show on screens wider than 768px */
+    }
 }
 
 /* Main content styling */
 main {
-    padding-top: 20px;
+    padding-top: 100px; /* Adjust for header height */
 }
 
 section {
     margin-bottom: 2rem;
 }
 
-section h1 {
-    color: #10b981;
-}
-
+section h1,
 section h2 {
     color: #10b981;
 }
@@ -82,14 +82,16 @@ section p {
 }
 
 /* Branches section */
-.branch-card {
+.branch-card,
+.testimonial-card {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.branch-card:hover {
+.branch-card:hover,
+.testimonial-card:hover {
     transform: scale(1.05);
     background-color: #d4f7dc;
 }
@@ -102,15 +104,16 @@ section p {
     border-top-right-radius: 0.5rem;
 }
 
-.branch-card .info {
+.branch-card .info,
+.testimonial-card p {
     padding: 1rem;
 }
 
-.branch-card h3 {
+.branch-card h3,
+.testimonial-card .author {
     color: #10b981;
 }
 
-/* Services section */
 .service-table {
     width: 100%;
     border-collapse: collapse;
@@ -133,28 +136,6 @@ section p {
 
 .service-table tbody tr:nth-child(even) {
     background-color: #f7fafc;
-}
-
-/* Testimonials section */
-.testimonial-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.05);
-    background-color: #d4f7dc;
-}
-
-.testimonial-card p {
-    color: #4b5563;
-}
-
-.testimonial-card .author {
-    color: #10b981;
-    font-weight: 600;
 }
 
 .slideInRight {
@@ -191,7 +172,6 @@ section p {
         opacity: 0;
         transform: translateX(20px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -231,23 +211,18 @@ section p {
     background-color: #059669;
 }
 
-
- /* Custom CSS for popping up effect on hover */
- .green-card {
+/* Custom CSS for popping up effect on hover */
+.green-card,
+.why-choose-us-card {
     transition: transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.green-card:hover {
-    transform: translateY(-5px) scale(1.05);
-}
-
-.why-choose-us-card {
-    background-color: #f0f0f0; /* Light gray */
-    transition: transform 0.3s; box-shadow: 0.3s;
-}
-
+.green-card:hover,
 .why-choose-us-card:hover {
-    background-color: #e5e5e5; /* Slightly darker gray on hover */
     transform: translateY(-5px) scale(1.05);
 }
+
+
+
+
