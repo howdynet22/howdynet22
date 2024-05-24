@@ -16,4 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Wait for all images, stylesheets, and scripts to be loaded
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loading-screen');
+    loader.classList.add('hidden');
+});
+
+// Spin animation for loading spinner
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
             
