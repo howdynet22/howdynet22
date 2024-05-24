@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+ // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
 // Wait for all images, stylesheets, and scripts to be loaded
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loading-screen');
