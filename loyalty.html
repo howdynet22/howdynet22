@@ -10,11 +10,6 @@
     
 </head>
 
-    <div class="loading-screen">
-        <div class="loading-text">Loading...</div>
-        <div class="loading-spinner"></div>
-    </div>
-
 <body class="bg-green-100">
     <!-- Header -->
     <header class="bg-green-700 text-white p-4 fixed w-full z-10 top-0">
@@ -43,22 +38,25 @@
             <p class="mt-4 text-green-800">Enjoy exclusive benefits and rewards!</p>
         </section>
 
-        <!-- Benefits Section -->
         <section class="mt-8 slide-in">
             <h2 class="text-3xl font-semibold text-green-900">Program Benefits</h2>
-            <div class="grid md:grid-cols-3 gap-4 mt-4">
-                <div class="p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card fadeIn">
-                    <h3 class="text-xl font-semibold mb-2">Earn Points</h3>
-                    <p class="text-green-700">Earn points for every purchase and redeem them for discounts.</p>
+            <div class="swiper-container mt-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card">
+                        <h3 class="text-xl font-semibold mb-2">Earn Points</h3>
+                        <p class="text-green-700">Earn points for every purchase and redeem them for discounts.</p>
+                    </div>
+                    <div class="swiper-slide p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card">
+                        <h3 class="text-xl font-semibold mb-2">Exclusive Offers</h3>
+                        <p class="text-green-700">Access exclusive offers and promotions available only to loyalty members.</p>
+                    </div>
+                    <div class="swiper-slide p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card">
+                        <h3 class="text-xl font-semibold mb-2">Birthday Rewards</h3>
+                        <p class="text-green-700">Celebrate your special day with birthday rewards and surprises.</p>
+                    </div>
                 </div>
-                <div class="p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card fadeIn">
-                    <h3 class="text-xl font-semibold mb-2">Exclusive Offers</h3>
-                    <p class="text-green-700">Access exclusive offers and promotions available only to loyalty members.</p>
-                </div>
-                <div class="p-4 bg-green-200 shadow-md hover:bg-green-300 transition-all duration-300 block rounded-md green-card fadeIn">
-                    <h3 class="text-xl font-semibold mb-2">Birthday Rewards</h3>
-                    <p class="text-green-700">Celebrate your special day with birthday rewards and surprises.</p>
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
