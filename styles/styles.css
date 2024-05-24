@@ -16,17 +16,7 @@ header .container {
 main {
     animation: fadeIn 1s ease-in-out;
 }
- html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
-        }
+
 /* Header styling */
 header {
     background-color: #10b981;
@@ -40,57 +30,6 @@ header {
 header.hidden {
     transform: translateY(-100%);
 }
-
-.swiper-container {
-    width: 100%;
-    max-width: 400px; /* Set maximum width */
-    height: 200px; /* Adjust as needed */
-    margin: 0 auto; /* Center horizontally */
-    overflow: hidden; /* Hide overflow content */
-}
-
-/* Custom navigation buttons */
-.swiper-button-prev, .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.swiper-button-prev:hover, .swiper-button-next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Indicator dots */
-.swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-
 
 header a {
     color: #ffffff;
@@ -130,7 +69,10 @@ section {
     margin-bottom: 2rem;
 }
 
-section h1,
+section h1 {
+    color: #10b981;
+}
+
 section h2 {
     color: #10b981;
 }
@@ -272,10 +214,6 @@ section p {
     animation: pulse 1s infinite;
 }
 
-.hidden {
-    display: none;
-}
-
 /* Header functionality */
 .hide-header-button {
     position: fixed;
@@ -291,4 +229,25 @@ section p {
 
 .hide-header-button:hover {
     background-color: #059669;
+}
+
+
+ /* Custom CSS for popping up effect on hover */
+ .green-card {
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.green-card:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.why-choose-us-card {
+    background-color: #f0f0f0; /* Light gray */
+    transition: transform 0.3s; box-shadow: 0.3s;
+}
+
+.why-choose-us-card:hover {
+    background-color: #e5e5e5; /* Slightly darker gray on hover */
+    transform: translateY(-5px) scale(1.05);
 }
