@@ -31,6 +31,19 @@ header.hidden {
     transform: translateY(-100%);
 }
 
+.swiper-container {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
 header a {
     color: #ffffff;
 }
