@@ -14,45 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
     });
 
-    // Initialize Swiper for program benefits section
-    var programBenefitsSwiper = new Swiper('.swiper-benefits-container', {
-        loop: true,
-        pagination: {
-            el: '.swiper-benefits-pagination',
-            clickable: true,
-        },
-        slideToClickedSlide: true,
-    });
-
-    // Initialize Swiper for autoplay section
-    var autoPlaySwiper = new Swiper('.swiper-autoplay-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-autoplay-pagination',
-            clickable: true,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-    });
-
-    // Initialize Swiper for navigation
-    var navigationSwiper = new Swiper('.swiper-navigation-container', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-navigation-pagination',
-            clickable: true,
-        },
-    });
-
+  // Initialize Swiper
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+      
     // Wait for all images, stylesheets, and scripts to be loaded
     window.addEventListener('load', () => {
         const loader = document.querySelector('.loading-screen');
